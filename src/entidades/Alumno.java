@@ -1,10 +1,7 @@
 
-package universidadgrupo14.entidades;
+package entidades;
 
 import java.time.LocalDate;
-
-
-
 
 public class Alumno {
     private int idAlumno;

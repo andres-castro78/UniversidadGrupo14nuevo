@@ -1,5 +1,5 @@
 
-package universidadgrupo14.entidades;
+package entidades;
 
 public class Materia {
     
