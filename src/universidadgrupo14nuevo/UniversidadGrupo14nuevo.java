@@ -21,15 +21,29 @@ public class UniversidadGrupo14nuevo {
 //        System.out.println("Apellido: " + alumnoEncontrado.getApellido());
 //        System.out.println("Nombre: " + alumnoEncontrado.getNombre());
 //        System.out.println("DNI: " + alumnoEncontrado.getDni());
-        Materia matem = new Materia ("Matemática", 2, true);
+      
+
+//Materia matem = new Materia ("Física", 1, true);
         MateriaData materia = new MateriaData();
         
-        materia.guardarMateria(matem);
-
-
+       // materia.guardarMateria(matem);
+       // materia.modificarMateria(matem);
+       //materia.eliminarMateria(1);
+       materia.buscarMateria(3);
+       
+AlumnoData alu=new AlumnoData();
+    for(Alumno alumno:alu.listarAlumnos()){
+        //mostrar los datos que queramos de cada elemento
+           System.out.println(alumno.getDni());
+           System.out.println(alumno.getNombre());
+           System.out.println(" ----- ");
 
     }
+    }
+}
+    
+    
 
     
     
-}
+

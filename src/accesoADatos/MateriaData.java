@@ -40,9 +40,9 @@ public class MateriaData {
 
     public Materia buscarMateria(int id) {
 
-        String sql = "SELECT nombre, año, estado FROM materia"
+        String sql = "SELECT nombre, año, estado FROM materia "
                 + "WHERE idMateria = ? AND estado = 1";
-
+        System.out.println(sql);
         Materia materia = null;
 
         try {
@@ -76,13 +76,14 @@ public class MateriaData {
     }
     
     public void modificarMateria(Materia materia){
-        String sql = "UPDATE materia SET nombre =?, año =?"
+        String sql = "UPDATE materia SET nombre =?, año =? "
                 + "WHERE idMateria = ?";
         
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, materia.getNombre());
             ps.setInt(2, materia.getAnioMateria());
+            ps.setInt(3, materia.getIdMateria());
             
             int exito = ps.executeUpdate();
             
@@ -121,3 +122,4 @@ public class MateriaData {
         }
 
 }
+//CAMBIADO
