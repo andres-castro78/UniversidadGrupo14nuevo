@@ -2,6 +2,8 @@ package accesoADatos;
 
 import entidades.Materia;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class MateriaData {
@@ -120,6 +122,41 @@ public class MateriaData {
         
         
         }
+    
+    public List<Materia> listarMaterias() {
+
+        String sql = "SELECT idMateria, nombre, año, estado FROM materia WHERE estado = 1";
+        System.out.println(sql);
+        ArrayList<Materia> materias = new ArrayList<>();
+
+        try {
+
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            
+                        
+            while (rs.next()){
+                
+               Materia materia = new Materia();
+               materia.setIdMateria(rs.getInt("idMateria"));
+               materia.setNombre(rs.getString("nombre"));
+               materia.setAnioMateria(rs.getInt("año"));
+               materia.setActivo(true);
+                
+               materias.add(materia);
+            
+            }
+            ps.close();
+            
+            
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla materia." + ex);
+
+        }
+        return materias;
+    }
+
 
 }
 //CAMBIADO

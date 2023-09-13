@@ -58,7 +58,7 @@ public class Materia {
 
     @Override
     public String toString() {
-       String mate = "Nro: " + idMateria + "Nombre: " + nombre + "Año: " + anioMateria;
+       String mate = "Nro: " + idMateria+";" + " Nombre: " + nombre+";" + " Año: " + anioMateria;
        return mate;
     }
     
