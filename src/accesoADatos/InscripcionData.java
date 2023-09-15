@@ -1,14 +1,8 @@
 
 package accesoADatos;
 
-import entidades.Alumno;
 import entidades.Inscripcion;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import javax.swing.JOptionPane;
 
 public class InscripcionData {
@@ -30,8 +24,8 @@ public class InscripcionData {
        try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setDouble(1, insc.getNota());
-            ps.setInt(2, insc.alumno.getIdAlumno());
-            ps.setInt(3, insc.materia.getIdMateria());
+            ps.setInt(2, insc.getAlumno().getIdAlumno());
+            ps.setInt(3, insc.getMateria().getIdMateria());
                        
             ps.executeUpdate();
             ResultSet rs = ps.getGeneratedKeys();

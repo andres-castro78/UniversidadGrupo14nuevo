@@ -17,24 +17,29 @@ public class UniversidadGrupo14nuevo {
         
         
         Connection conect = Conexion.getConexion();
-       Alumno juan = new Alumno (1, 111111111, "Luna", "Juan Pedro",LocalDate.of(1970, 5 , 17),false);
-//       AlumnoData alu = new AlumnoData();
+    //   Alumno juan = new Alumno (1, 111111111, "Luna", "Juan Pedro",LocalDate.of(1970, 5 , 17),false);
+       AlumnoData alu = new AlumnoData();
 //       alu.guardarAlumno(juan); 
       //alu.modificarAlumno(juan);
       //alu.eliminarAlumno(1);
-//       Alumno alumnoEncontrado = alu.buscarAlumno(5);
-//        if(alumnoEncontrado!=null){
-//        System.out.println("Apellido: " + alumnoEncontrado.getApellido());
-//        System.out.println("Nombre: " + alumnoEncontrado.getNombre());
-//        System.out.println("DNI: " + alumnoEncontrado.getDni());
+       Alumno alumnoEncontrados = alu.buscarAlumno(5);
+        if(alumnoEncontrados!=null){
+        System.out.println("Apellido: " + alumnoEncontrados.getApellido());
+        System.out.println("Nombre: " + alumnoEncontrados.getNombre());
+        System.out.println("DNI: " + alumnoEncontrados.getDni());
+        
+         Alumno alumnoEncontrado = alu.buscarAlumnoPorDni(1111);
+       if(alumnoEncontrado!=null){
+        System.out.println("Apellido: " + alumnoEncontrado.getApellido());
+        System.out.println("Nombre: " + alumnoEncontrado.getNombre());
+        System.out.println("DNI: " + alumnoEncontrado.getDni());
       
 
-    Materia mat1 = new Materia ("Lengua", 2, true);
+   // Materia mat1 = new Materia (4, "Lengua", 2, true);
 //    Materia mat2 = new Materia ("Ciencias Políticas", 1, true);
-        MateriaData mat = new MateriaData();
-        
-//       materia.guardarMateria(mat1);
-//       materia.guardarMateria(mat2);
+   //     MateriaData mat = new MateriaData();
+ //        mat.guardarMateria(mat1);
+//       mat.guardarMateria(mat2);
        // materia.modificarMateria(matem);
        //materia.eliminarMateria(1);
        //materia.buscarMateria(3);
@@ -54,13 +59,17 @@ AlumnoData alu=new AlumnoData();
             
  //           System.out.println(materia.toString());
  */
- 
+/* 
  InscripcionData inscrip = new InscripcionData();
  Inscripcion insc1 = new Inscripcion(juan, mat1, 8);
  inscrip.guardarInscripcion(insc1);
+ */
         }
-
     }
+}
+}
+
+    
     
 
     
