@@ -17,8 +17,13 @@ public class UniversidadGrupo14nuevo {
         
         
         Connection conect = Conexion.getConexion();
+
     //   Alumno juan = new Alumno (1, 111111111, "Luna", "Juan Pedro",LocalDate.of(1970, 5 , 17),false);
        AlumnoData alu = new AlumnoData();
+
+       Alumno juan = new Alumno (3, 111111111, "Luna", "Juan Pedro",LocalDate.of(1970, 5 , 17),false);
+//       AlumnoData alu = new AlumnoData();
+
 //       alu.guardarAlumno(juan); 
       //alu.modificarAlumno(juan);
       //alu.eliminarAlumno(1);
@@ -35,7 +40,11 @@ public class UniversidadGrupo14nuevo {
         System.out.println("DNI: " + alumnoEncontrado.getDni());
       
 
+
    // Materia mat1 = new Materia (4, "Lengua", 2, true);
+
+    Materia mat1 = new Materia (3,"Lengua", 2, true);
+
 //    Materia mat2 = new Materia ("Ciencias Políticas", 1, true);
    //     MateriaData mat = new MateriaData();
  //        mat.guardarMateria(mat1);
