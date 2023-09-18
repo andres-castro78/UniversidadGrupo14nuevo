@@ -19,31 +19,31 @@ public class UniversidadGrupo14nuevo {
         Connection conect = Conexion.getConexion();
 
     //   Alumno juan = new Alumno (1, 111111111, "Luna", "Juan Pedro",LocalDate.of(1970, 5 , 17),false);
-       AlumnoData alu = new AlumnoData();
-
-       Alumno juan = new Alumno (3, 111111111, "Luna", "Juan Pedro",LocalDate.of(1970, 5 , 17),false);
+//       AlumnoData alu = new AlumnoData();
+//
+//       Alumno juan = new Alumno (3, 111111111, "Luna", "Juan Pedro",LocalDate.of(1970, 5 , 17),false);
 //       AlumnoData alu = new AlumnoData();
 
 //       alu.guardarAlumno(juan); 
       //alu.modificarAlumno(juan);
       //alu.eliminarAlumno(1);
-       Alumno alumnoEncontrados = alu.buscarAlumno(5);
-        if(alumnoEncontrados!=null){
-        System.out.println("Apellido: " + alumnoEncontrados.getApellido());
-        System.out.println("Nombre: " + alumnoEncontrados.getNombre());
-        System.out.println("DNI: " + alumnoEncontrados.getDni());
-        
-         Alumno alumnoEncontrado = alu.buscarAlumnoPorDni(1111);
-       if(alumnoEncontrado!=null){
-        System.out.println("Apellido: " + alumnoEncontrado.getApellido());
-        System.out.println("Nombre: " + alumnoEncontrado.getNombre());
-        System.out.println("DNI: " + alumnoEncontrado.getDni());
-      
+//       Alumno alumnoEncontrados = alu.buscarAlumno(5);
+//        if(alumnoEncontrados!=null){
+//        System.out.println("Apellido: " + alumnoEncontrados.getApellido());
+//        System.out.println("Nombre: " + alumnoEncontrados.getNombre());
+//        System.out.println("DNI: " + alumnoEncontrados.getDni());
+//        
+//         Alumno alumnoEncontrado = alu.buscarAlumnoPorDni(1111);
+//       if(alumnoEncontrado!=null){
+//        System.out.println("Apellido: " + alumnoEncontrado.getApellido());
+//        System.out.println("Nombre: " + alumnoEncontrado.getNombre());
+//        System.out.println("DNI: " + alumnoEncontrado.getDni());
+//      
 
 
    // Materia mat1 = new Materia (4, "Lengua", 2, true);
 
-    Materia mat1 = new Materia (3,"Lengua", 2, true);
+//    Materia mat1 = new Materia (3,"Lengua", 2, true);
 
 //    Materia mat2 = new Materia ("Ciencias Políticas", 1, true);
    //     MateriaData mat = new MateriaData();
@@ -72,9 +72,21 @@ AlumnoData alu=new AlumnoData();
  InscripcionData inscrip = new InscripcionData();
  Inscripcion insc1 = new Inscripcion(juan, mat1, 8);
  inscrip.guardarInscripcion(insc1);
- */
+ 
         }
     }
+*/
+        InscripcionData insc = new InscripcionData();
+        insc.obtenerInscripciones();
+        
+//           for(Inscripcion inscripcion:insc.obtenerInscripciones()){
+//               
+//               System.out.println("Id del Alumno: "+inscripcion.getIdAlumno());
+//               System.out.println("Id de la Materia: "+inscripcion.getIdMateria());
+//               System.out.println("Nota: "+inscripcion.getNota());
+               
+//           }
+
 }
 }
 
