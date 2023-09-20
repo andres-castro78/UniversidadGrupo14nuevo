@@ -49,44 +49,4 @@ public class InscripcionData {
         }
       
     }
-    
-    public List<Inscripcion> obtenerInscripciones(){
-        
-        List<Inscripcion> inscripciones = new ArrayList<>();
-        
-        String sql = "SELECT nota , idAlumno, idMateria FROM inscripcion ";
-        
-        
-        try {
-            
-            PreparedStatement ps= con.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-           
-            while (rs.next()) {
-                //Dentro de while creamos un objeto vacio:
-                Inscripcion inscripcion = new Inscripcion();
-                //Vamos a setear los datos en base a los que devolvio el ResulSet
-                
-                inscripcion.setNota(rs.getDouble("nota"));               
-                //inscripcion.setIdAlumno(rs.getInt("idAlumno"));
-                inscripcion.setIdMateria(rs.getInt("idMateria"));
-                 
-               
-                System.out.println(inscripcion.getNota());
-                
-                System.out.println(inscripcion.getIdMateria());
-        //Guardamos el objeto en la lista de inscripciones.
-                inscripciones.add(inscripcion);
-            
-            ps.close();
-            }
-            
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscripción. "+ex);
-        }
-            
-            return inscripciones;
-        
-    }
-    
 }
